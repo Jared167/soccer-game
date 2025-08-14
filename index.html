@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Premier League Manager — Real Squads</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="budgetDisplay">Budget: $100M</div>
+
+  <div id="menu">
+    <h1>Premier League Manager</h1>
+    <button id="startSeason">Start Season</button>
+  </div>
+
+  <div id="season" style="display:none;">
+    <div class="topRow">
+      <h2>Season Calendar (Your Team Fixtures)</h2>
+      <div class="controls">
+        <button id="openMarketBtn">Open Transfer Market</button>
+        <button id="openRosterBtn">View Roster</button>
+        <button id="restartBtn">Restart Season</button>
+      </div>
+    </div>
+    <div id="calendar"></div>
+  </div>
+
+  <!-- Transfer Market -->
+  <div id="transferMarket" class="overlay" style="display:none;">
+    <div class="panel">
+      <h2>Transfer Market</h2>
+      <button id="closeMarketBtn" class="closeBtn">Close Market</button>
+      <div id="players"></div>
+    </div>
+  </div>
+
+  <!-- Roster Sidebar -->
+  <div id="roster" class="sidebar" style="display:none;">
+    <div class="panel">
+      <h2>Your Squad - <span id="rosterTeam"></span></h2>
+      <button id="closeRosterBtn" class="closeBtn">Close</button>
+
+      <div><strong>Starting XI</strong></div>
+      <div id="startingLineup" class="list"></div>
+
+      <div><strong>Substitutes</strong></div>
+      <div id="substitutes" class="list"></div>
+
+      <div class="rosterButtons">
+        <button id="saveRosterBtn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Match Stats Modal -->
+  <div id="matchStats" class="overlay" style="display:none;">
+    <div class="panel">
+      <h2>Match Stats</h2>
+      <button id="closeStatsBtn" class="closeBtn">Close</button>
+      <div id="statsContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
